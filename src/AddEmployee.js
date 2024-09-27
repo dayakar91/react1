@@ -12,7 +12,11 @@ const EmployeeDataTable=()=>{
    // const navigate = useNavigate();
    // changed for testing in github for pull
    // changed for testing in gituhb for push 
+<<<<<<< HEAD
    // changed for testing in branch19999191 
+=======
+   // changed for testing in branch1999919 
+>>>>>>> 5b1ff033d70d4448e7e2f73aeb1912ee879ba911
     const baseURL = "https://639dc5103542a261304f55c2.mockapi.io/test_react";
     const [employees, setEmployees] = useState([]);
     const [updateState,setUpdateState]=useState(-1);
