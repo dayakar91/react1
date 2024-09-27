@@ -11,7 +11,7 @@ const AddInvoice = () => {
   const [productslist, setProductsList] = useState(initialProductsList || []);
   const [prices, setPrices] = useState(initialPrices || []);
 
-  const navigate=useNavigate(); //comment navigate
+  const navigate=useNavigate(); //comment navigate1
 
 
 
