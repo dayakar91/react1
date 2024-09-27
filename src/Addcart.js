@@ -560,7 +560,7 @@ remove = (name, cost, img) => {
         items: updatedItems,
         total_items: total_items > 0 ? total_items - 1 : total_items,
         total: total > 0 ? total - cost : total,
-        addedItems: updatedAddedItems, // Update cartItems with remaining items
+        addedItems: updatedAddedItems, // Update cartItems with remaining items1
       };
     });
   };
