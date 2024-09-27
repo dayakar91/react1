@@ -22,7 +22,7 @@ const EmployeeDataTable=()=>{
     const handleFile=(e)=>{
       setFile(e.target.files[0]);
     }
-
+//Update code
     const handleUpload=()=>{
       if(file){
        const formData=new FormData();
