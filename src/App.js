@@ -1,5 +1,6 @@
 //import logo from './logo.svg';
-import './App.css';
+//import './App.css';
+import React from 'react';
 import { BrowserRouter,Route,Routes } from 'react-router-dom';
 import Layout from './pages/Layout';
 import Home from './pages/Home';
@@ -21,19 +22,26 @@ import { createContext } from 'react';
 import { UserProvider } from './components/context';
 import AddPos from './AddPos';
 import Invoice from './AddInvoice';
-import { gapi } from 'gapi-script';
+//import { gapi } from 'gapi-script';
 import Fee from './Fee';
-
+import AjaxRedux from './AjaxRedux';
+import Tabs from './components/CompoundTabs';
+import Parent from './components/ParentComponet';
+import Child from './components/ChildComponent';
+import StudentList from './components/customapi';
+import LoginApi from './components/loginapi';
+import UsememoEx from './components/usememoex';
+import UsecallbackEx from './components/usecallbacex';
 export const UsernameContext = createContext();
 function App() {
 
-  gapi.load("client:auth2", () => {
-    gapi.client.init({
-      clientId:
-        "423146661767-8qma2nmn1h9drsvjknvp8qgmdipak5jj.apps.googleusercontent.com",
-      plugin_name: "chat",
-    });
-  });
+  // gapi.load("client:auth2", () => {
+  //   gapi.client.init({
+  //     clientId:
+  //       "423146661767-8qma2nmn1h9drsvjknvp8qgmdipak5jj.apps.googleusercontent.com",
+  //     plugin_name: "chat",
+  //   });
+  // });
 
 const [count,setCount]=useState(0);
 const [todos,setTodos]=useState(["ToDo1","ToDo2"]);
@@ -74,10 +82,10 @@ const increment=()=>{
      <button type='button' onClick={()=>setColor('Pink')}>Pink</button>
      </>,
     <>
-    <div  class="container card mb-4 box-shadow">
+    <div  className="container card mb-4 box-shadow">
 
-  <div class="card-header">
-    <h4 class="my-0 font-weight-normal">React CRUD Example</h4>
+  <div className="card-header">
+    <h4 className="my-0 font-weight-normal">React CRUD Example</h4>
   </div>
 
   <BrowserRouter>
@@ -97,6 +105,13 @@ const increment=()=>{
             <Route path='/addpos' element={<AddPos/>}/>
             <Route path='/fee' element={<Fee/>}/>
             <Route path='/addinvoice' element={<Invoice/>}/>
+            <Route path='/AjaxRedux' element={<AjaxRedux/>}/>
+			      <Route path='/Tabs' element={<Tabs/>}/>
+			      <Route path='/parent' element={<Parent/>}/>
+			      <Route path='/student' element={<StudentList/>}/>
+            <Route path='/loginapi' element={<LoginApi/>}/>
+            <Route path='/usememoex' element={<UsememoEx/>}/>
+            <Route path='/usecallbackex' element={<UsecallbackEx/>}/>
             {/* <Route path='edit/:id' element={<EmployeeForm />} render={(props) => <EmployeeForm {...props} />} /> */}
           </Route>
   </Routes>

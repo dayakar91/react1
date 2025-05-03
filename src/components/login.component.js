@@ -184,7 +184,7 @@ const Login = (props) => {
         </div>
         <div>{pwdValid}</div>
         <div className="form-group">
-          <button className="btn btn-primary btn-block">Login</button>
+          <button className="btn btn-primary btn-block">Login1</button>
           <Link to="/register" >Register</Link>
           
           {isLoggedIn ? (

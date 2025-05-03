@@ -43,11 +43,11 @@ const AddPos = () => {
         //alert(JSON.stringify(response))
         const newProduct = response.data.data;
         if(newProduct.length>0){
-        setProductsList((prevList) => {
-          return prevList.concat(newProduct);
-        });
-        setProducts([]);
-        setSelectedOption(option);
+          setProductsList((prevList) => {
+            return prevList.concat(newProduct);
+          });
+          setProducts([]);
+          setSelectedOption(option);
 
         }else{
           setSelectedOption("option");
@@ -70,7 +70,7 @@ const AddPos = () => {
   };
   //End of Onchange function
 
-  //----------------------------Setting Products for List Items
+  //----------------------------Setting Products for List Items----------------
   useEffect(() => {
     if (Array.isArray(products) && products.length > 0) {
       const filtered = products.map((product) => ({
@@ -114,7 +114,6 @@ const AddPos = () => {
       } else {
         //alert("Mismatch in product count and price count");
         alert("Please select Qty for all products");
-
       }  
       // prices.map((v,i)=>{
       //   alert(prices[i])
@@ -184,7 +183,8 @@ const AddPos = () => {
           ))
           }
         </ul>
-        {selectedOption && (
+        {
+        selectedOption && (
           <div>
             <p>You selected: {selectedOption.label}</p>
             <div>
@@ -212,7 +212,8 @@ const AddPos = () => {
             </div>
             <button onClick={addToCart}>Add to Cart</button>
           </div>
-        )}
+        )
+        }
       </div>
     </div>
   );
