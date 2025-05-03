@@ -17,6 +17,8 @@ import axios from 'axios';
 
 import { jwtDecode } from 'jwt-decode';
 import Login from './components/login.component';
+import { Provider } from 'react-redux';
+import store from './AjaxReduxStore';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const root1 = ReactDOM.createRoot(document.getElementById('root1'));
 const root2 = ReactDOM.createRoot(document.getElementById('root2'));
@@ -63,7 +65,9 @@ if (x < 10) {
 const myElement = <h5>{text}</h5>;
 root.render(
   <React.StrictMode>
+    <Provider store={store}>
     <App />
+    </Provider>
   </React.StrictMode>
 );
 

@@ -86,7 +86,8 @@ pdf.save('invoice.pdf');
           </tr>
         </thead>
         <tbody>
-          {productslist.map((item, index) => (
+          {
+          productslist.map((item, index) => (
             <tr key={index}>
               <td>{item.label}</td>
               <td>{item.batch}</td>
@@ -108,13 +109,11 @@ pdf.save('invoice.pdf');
                     }}
             />
             </td>
-
-              <td>{prices[index]}</td>
-              <td>
-                <button onClick={() => removeItem(index)}>Remove</button>
-              </td>
+            <td>{prices[index]}</td>
+            <td><button onClick={() => removeItem(index)}>Remove</button></td>
             </tr>
-          ))}
+          ))
+          }
         </tbody>
       </table>
       <button onClick={()=>backtohome()}>Back To Home</button>
